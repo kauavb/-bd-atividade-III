@@ -21,11 +21,11 @@ END;
 DELIMITER ;
 
 INSERT INTO Produto(nomeProduto,estoque ,produtoVendido)
-VALUES('Pão Frânces',100, 20);
+VALUES('Sanduiche Natural de Presunto',70, 10);
 INSERT INTO Produto(nomeProduto,estoque ,produtoVendido)
-VALUES('Bolacha',120, 100);
+VALUES('Suco de Uva',155, 85);
 INSERT INTO Produto(nomeProduto,estoque ,produtoVendido)
-VALUES('Salgado',10, 5);
+VALUES('Biscoito',26, 7);
 
 UPDATE Produto 
 set estoque = estoque * 1
