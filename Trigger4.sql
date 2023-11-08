@@ -29,9 +29,9 @@ DELIMITER ;
 
 
 INSERT INTO Funcionarios(nome,Cargo)
-VALUES('Rodrigo Farra','Finanças'),
-('Jorge Amado','Desenvolvedor Sênior'),
-('Mariluce Pereira','Engenheira');
+VALUES('Pedro Julio','Finanças'),
+('Bianca Menezes','Desenvolvedor'),
+('Maria Luiza','Medica');
 
 DELETE FROM Funcionarios 
 WHERE idFuncionarios = 1;
