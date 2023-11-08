@@ -21,13 +21,13 @@ begin
 END //
 
 INSERT INTO Produto(nomeProduto,dataValidade)
-VALUES('Pão Frânces','2023-11-09');
+VALUES('Pao Integral','2023-08-01');
 INSERT INTO Produto(nomeProduto,dataValidade)
-VALUES('Bolacha','2023-11-07');
+VALUES('Salame','2023-10-30');
 INSERT INTO Produto(nomeProduto,dataValidade)
-VALUES('Salgado','2023-11-11');
+VALUES('Sanduiche Natural','2023-11-10');
 INSERT INTO Produto(nomeProduto,dataValidade)
-VALUES('Suco','2023-10-06');
+VALUES('Queijo Suino','2023-10-07');
 
 SELECT * FROM Produto;
 
