@@ -1,0 +1,38 @@
+
+CREATE DATABASE ATIVIDADEVIEW3;
+
+USE ATIVIDADEVIEW3;
+
+CREATE TABLE Vendedor(
+	Id int auto_increment primary key,
+    nomeV varchar(150) not null,
+);
+
+CREATE TABLE Clientes(
+	IdCliente int auto_increment primary key,
+    nomeC varchar(150) not null,
+    feedback varchar(255) not null,
+	Vendedor_ID int,
+	
+	foreign key (Vendedor_ID) references Vendedor(Id)
+);
+
+INSERT INTO Vendedor(nomeV)
+VALUES('Barbara'),
+('Karine'),
+('Matheus');
+
+INSERT INTO Clientes(nomeC,,feedback,Vendedor_ID)
+VALUES('Marilene','Achei o atendimento favorável',1),
+('Jorge','Não gostei muito do atendimento ele foi muito grosso',3),
+('Creuza','Gostei do atendimento dela',2);
+
+CREATE VIEW vw_relacionamento_cliente_vendedor AS 
+SELECT  C.nomeC as 'Nome Cliente', 
+		C.feedback as 'Feedback', 
+        V.nomeV as 'Nome do Vendendor'
+FROM Vendedor AS V
+INNER JOIN Clientes AS C
+ON  C.Vendedor_ID = V.Id;
+
+select * from vw_relacionamento_cliente_vendedor;
