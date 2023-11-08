@@ -31,14 +31,14 @@ END;
 DELIMITER ;
 
 INSERT INTO Funcionarios(nome,Cargo)
-VALUES('Rodrigo Farra','Finanças'),
-('Jorge Amado','Desenvolvedor Sênior'),
-('Mariluce Pereira','Engenheira');
+VALUES('Rafael Chagas','Administrador de Banco de Dados'),
+('Luiza Amado','Desenvolvedora'),
+('Bianca Meneses','Arquiteta');
 
 INSERT INTO Dependentes(nome,Cargo,Funcionario_ID)
-VALUES('Maria Cururu','Design Gráfico',3),
-('Juremo Neutre','Passivista',2),
-('Bita Mercurio','Minerador',1);
+VALUES('Gleicia Neves','Jovem aprendiz',3),
+('Kaua Reis','Estudante',2),
+('Melissia Bispo','Vendedora',1);
 
 DELETE FROM Funcionarios 
 WHERE idFuncionarios = 1;
