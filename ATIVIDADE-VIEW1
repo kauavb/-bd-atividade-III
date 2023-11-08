@@ -1,0 +1,42 @@
+CREATE DATABASE ATIVIDADEVIEW1;
+
+USE ATIVIDADEVIEW1;
+
+CREATE TABLE Departamento(
+	IdDepartamento int auto_increment primary key,
+    NomeDoDepartamento varchar(50) not null
+);
+
+CREATE TABLE Funcionario(
+	id int auto_increment primary key,
+    nome varchar(150) NOT NULL,
+    Cargo varchar(50) NOT NULL,
+    DepartamentoID int,
+    
+    foreign key (DepartamentoID) references Departamento(IdDepartamento)
+);
+
+INSERT INTO ATIVIDADEVIEW1.Departamento(NomeDoDepartamento)
+VALUES ('Tecnologia da Informação');
+INSERT INTO ATIVIDADEVIEW1.Departamento(NomeDoDepartamento)
+VALUES ('Engenharia');
+INSERT INTO ATIVIDADEVIEW1.Departamento(NomeDoDepartamento)
+VALUES ('Administração');
+
+INSERT INTO ATIVIDADEVIEW1.Funcionarios(nome, Cargo, DepartID)
+VALUES('Carla','Finanças', 3),
+('Mauriciu' , 'Desenvolvedor Sênior', 1),
+('Pedro', 'Engenheiro', 2);
+
+CREATE VIEW vw_funcionarios_departamento AS 
+SELECT  F.nome AS 'Nome do Funcionario', 
+		F.Cargo AS 'Cargo', 
+		D.NomeDoDepartamento AS 'Departamento'
+FROM Funcionario  F
+INNER JOIN Departamento  D
+ON F.DepartamentoID = D.IdDepartamento
+WHERE D.NomeDoDepartamento = 'Administração'
+GROUP BY F.id;
+
+SELECT * FROM vw_funcionarios_departamento;
+
