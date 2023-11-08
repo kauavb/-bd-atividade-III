@@ -19,11 +19,11 @@ END;
 DELIMITER ;
 
 INSERT INTO Produto(nomeProduto,valor)
-VALUES('Pão Frânces',12);
+VALUES('Suco Integral',12);
 INSERT INTO Produto(nomeProduto,valor)
-VALUES('Bolacha',13);
+VALUES('Torresmo',13);
 INSERT INTO Produto(nomeProduto,valor)
-VALUES('Salgado',20);
+VALUES('Misto Quente',20);
 
 UPDATE Produto 
 set valor = valor * 1
