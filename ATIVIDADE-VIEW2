@@ -1,0 +1,23 @@
+CREATE DATABASE ATIVIDADEVIEW2;
+
+USE ATIVIDADEVIEW2;
+
+CREATE TABLE Produto(
+	id int auto_increment primary key,
+    nome varchar(100) NOT NULL,
+	Estoque int NOT NULL
+);
+
+INSERT INTO Produto(nome,Estoque)
+VALUES('Smarthphone',120),
+('Tablet',3),
+('Terno',2),
+('Teclado',200),
+('Celular',1);
+
+CREATE VIEW vw_estoque_insuficiente AS
+SELECT id, nome, Estoque
+FROM Produto
+WHERE Estoque < 5;
+
+SELECT * FROM vw_estoque_insuficiente;
